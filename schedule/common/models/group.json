@@ -1,0 +1,24 @@
+{
+  "name": "Group",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "tests": {
+      "type": "hasMany",
+      "model": "Tests",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

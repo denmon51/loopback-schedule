@@ -1,0 +1,33 @@
+{
+  "name": "Doctors",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "mane": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "tests": {
+      "type": "hasAndBelongsToMany",
+      "model": "Tests",
+      "foreignKey": ""
+    },
+    "groups": {
+      "type": "hasMany",
+      "model": "Group",
+      "foreignKey": "",
+      "through": "Tests"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Tests",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "start_date": {
+      "type": "date",
+      "required": true
+    },
+    "end_date": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "examinators": {
+      "type": "hasAndBelongsToMany",
+      "model": "Doctors",
+      "foreignKey": ""
+    },
+    "group": {
+      "type": "belongsTo",
+      "model": "Group",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
